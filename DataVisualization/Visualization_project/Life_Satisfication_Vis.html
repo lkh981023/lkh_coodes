@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Satisifaction index visualization</title>
+    <link rel='stylesheet' href='dvp.css'>
+    <!-- Library for JS -->
+    <script src="d3.v4.min.js"></script>
+    <script src="queue.v1.min.js"></script>
+    <script src="d3-tip.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+</head>
+<!-- format of the whole webpage -->
+
+<body>
+    <div class="header">
+        <h1>Life Satisifaction index visualization</h1>
+        <p>Welcome to the Life Satisifaction index visualization
+            Web page! Click on the button below to go
+            directly to the chart you want to know😉
+        </p>
+    </div>
+    <div class='navbar'>
+        <a href="#overview">🧐overview🧐</a>
+        <a href="#visual_two">📊Top10 countries📊</a>
+        <a href="#sub_header">🤔Work v.s. happiness🤔</a>
+        <a href="#vis_eight">🌐Continent compare🌐</a>
+    </div>
+    <div class='intro' style="text-align: center">
+        <h1>💕Life satisfication index overview around the word💕</h1>
+        <p>The map belows provide an overview of an avergae life satisfication index from
+            2010 to 2017. The deeper color represent this country has the higher average life satisfication
+            index. click on the map to know the details of each country🤓
+        </p>
+    </div>
+    <div id='overview' ,class=map>
+
+    </div>
+    <div class="row">
+        <div id='visual_two' class="visual">
+            <h3>🛫Top 10 country with higest Life satisfication index🛬</h3>
+            <h5>🧐click on graph to know details!🧐</h5>
+
+        </div>
+        <div class="discription">
+            <h2>Top 10 happiest country around world </h2>
+            <p>The charts below shows the first ten countries with highest life satisfaction index.
+                Overall, these countries all have a happiness index of around 7.5.
+                , if we observe these countries' names we can find
+                these countries are all belongs to the
+                developed countries and this could explain why
+                these countries have relatively high life satisfaction indices;
+                because they have comprehensive public facilities
+                and better social welfare, both of which have a direct impact on individual’s
+                satisfaction with their life.</p>
+        </div>
+    </div>
+    </div>
+    <div class="sub_header">
+        <h2>How does the working hour effect on the happiness index🤔</h2>
+        <p>This section shows the overview of relationship between working hour
+            and happiness index.And the cluster analysis result will also be shown in this section. I'm apply
+            the cluster analysis while using KMeans algorithms with K=3🧐
+        </p>
+        <p>In this section you will also see the ratio: work-life ratio🤔. We define this ratio as: </p>
+        <p>Working-life ratio = Average annual working hour / Life satisfaction index</p>
+        <p>Assuming the working hour is relatively fixed, the higher ratio means that this country’s
+            working-life balance cannot be achieved
+            well since they have low life satisfaction index...😞 </p>
+        <p>Scrolling down to know more details!🔍
+        </p>
+    </div>
+    <div class="row">
+        <div class="discription">
+            <h2>In the world...🌐</h2>
+            <p>Nowadays most of people are busy with their work and work-life balance
+                is a goal that we always want to acheived. How does the working hour effect on
+                the happiness index around the world? The graph shows the relationship between
+                average annual working hour and average life satisfication index record from 2010 to
+                2017. Specifically, there has a negative relationship between working hour
+                and happiness index. The country with high happiness index shows the
+                low average annual working hour figure.
+
+            </p>
+        </div>
+        <div id='visual_three' class="visual">
+            <h3>🧐Details around world🧐</h3>
+            <h5>😉click on bubble to know the details of each countries😉</h5>
+            <p>color represent different continents. X-axis is average happiness index between 2010
+                and 2017
+                Y-axis is average annual working hour from 2010 to 2017.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div id='visual_four' class="visual">
+            <h3>Cluster Group 1</h3>
+            <h5>😉click on bubble to know the details of each countries in this group😉</h5>
+            <p>X-axis is average happiness index between 2010
+                and 2017.</p>
+            <p> Y-axis is average annual working hour from 2010 to 2017. The color change represent
+                the number of work-life ratio.</p>
+            <p>The higher ratio the deeper color</p>
+        </div>
+        <div class="discription">
+            <h2>Cluster group 1</h2>
+            <p>Overall, most observation in this group has the life satisfaction score below 6.5, and
+                the annual working hour per worker in this group all above 1800 hours. The work-life
+                ratio in this group are around 350. </p>
+        </div>
+
+    </div>
+    </div>
+    <div class="row">
+        <div class="discription">
+            <h2>Cluster Group 2</h2>
+            <p>This group has high happiness index score but low average annual
+                working hour per worker. Specifically, the range of annual working hour
+                in this group is between 1300 and 1800 hours and the life satisfaction
+                index is concentrate on 6.0 to 7.0.The work-life ratio in this group is also
+                lower than group1, with the score around 240. It's seems that countries in
+                this group can acheive better work life balance in people's real life.
+            </p>
+        </div>
+        <div id='visual_five' class="visual">
+            <h3>Cluster Group 2</h3>
+            <h5>😉click on bubble to know the details of each countries in this group😉</h5>
+            <p>X-axis is average happiness index between 2010
+                and 2017.</p>
+            <p> Y-axis is average annual working hour from 2010 to 2017. The color change represent
+                the number of work-life ratio.</p>
+            <p>The higher ratio the deeper color</p>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div id='visual_six' class="visual">
+            <h3>Cluster Group 3</h3>
+            <h5>😉click on bubble to know the details of each countries in this group😉</h5>
+            <p>X-axis is average happiness index between 2010
+                and 2017.</p>
+            <p> Y-axis is average annual working hour from 2010 to 2017. The color change represent
+                the number of work-life ratio.</p>
+            <p>The higher ratio the deeper color</p>
+
+        </div>
+        <div class="discription">
+            <h2>Cluster group3</h2>
+            <p>By observe the graph, we can find this group has high average annual
+                working hour, the range of working hour in group 3 is between 2000
+                and 2500. The range of happiness index in this group is between 4 to
+                6.5. The work-life ratio in this group is very high, most countries in
+                this group has the work-life ratio around 500. The high work-life ratio indicate
+                countries in this group cannot acheive well work lice balance,
+                Work takes up most of their life...
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="discription">
+            <h2>🌐Continent Compare🌐</h2>
+            <p>How does these indicators compare in different continent? The graph
+                shows the result compare within different continent. Overall,
+                the graph shows Oceania and Europe has better performance among all
+                Continents and these result is consist with the finding before:
+                most of countries in cluster group2 (with high life index ratio and low
+                annual working hour) and Top 10 happiest countries around world are from these
+                two Continents.
+            </p>
+        </div>
+        <div id='vis_eight' class="visual">
+            <h3>🛫Continent Compare🛬</h3>
+            <h5>🧐click on button to see the change!🧐</h5>
+            <button onclick="update('Life_satisfaction')">Life_satisfaction</button>
+            <button onclick="update('work_life_ratio')">worklife_ratio</button>
+            <button onclick="update('working_hours')">working_hours</button>
+
+        </div>
+    </div>
+    <div class='sub_header'>
+        <h2>In the End</h2>
+        <div class=row>
+            <div class='discription_last'>
+                <p>After observe the visualizations above we now can conclude a negative
+                    relationship can be found between working hour and happiness index🔍
+                </p>
+                <p>The higher annual working hourper worker in this country, the happiness
+                    index in this country may much lower than correspanding figure in the
+                    country with low average annual working hour👩🏻‍💻🧑🏻‍💻
+                </p>
+                <p>
+                    However, it should be noted that the happiness index is not only effect by
+                    annual working hour, there also has other factors may have siginificant
+                    effect on happines index🧐
+                </p>
+                <p>Click the link below if you want to know more about this!🔍</p>
+                <ol>
+                    <a href="https://www.oecdbetterlifeindex.org/topics/life-satisfaction/">
+                        OECD Better Life Index
+                    </a>
+                </ol>
+                <ol>
+                    <a href='https://worldpopulationreview.com/country-rankings/happiest-countries-in-the-world'>
+                        Happiest Countries in the World 2022
+                    </a>
+                </ol>
+                <ol>
+                    <a
+                        href='https://www.psychologytoday.com/us/blog/the-happiness-doctor/201705/measuring-happiness-how-can-we-measure-it'>
+                        Measuring Happiness: How Can We Measure it?
+                    </a>
+                </ol>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Code for d3-->
+    <!-- reference: https://d3-graph-gallery.com/ -->
+    <script type='module' src="overview.js"></script>
+    <script type='module' src="visual_two.js"></script>
+    <script type='module' src="visual_three.js"></script>
+    <script type='module' src="visual_four.js"></script>
+    <script type='module' src="visual_five.js"></script>
+    <script type='module' src="visual_six.js"></script>
+    <script src="visual_eight.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
